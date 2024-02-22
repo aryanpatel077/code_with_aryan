@@ -1,113 +1,264 @@
-import Image from "next/image";
+import Link from "next/link"
 
-export default function Home() {
+export default function Component() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="flex flex-col min-h-screen">
+      <header className="py-4 md:py-6">
+        <nav className="container flex items-center justify-between px-4 md:px-6">
+          <Link className="flex items-center space-x-2 font-semibold" href="#">
+            <span>Acme</span>
+          </Link>
+          <div className="hidden space-x-4 md:flex">
+            <Link
+              className="flex items-center space-x-1.5 font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+              href="#"
+            >
+              Home
+            </Link>
+            <Link
+              className="flex items-center space-x-1.5 font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+              href="#"
+            >
+              About
+            </Link>
+            <Link
+              className="flex items-center space-x-1.5 font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+              href="#"
+            >
+              Portfolio
+            </Link>
+            <Link
+              className="flex items-center space-x-1.5 font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+              href="#"
+            >
+              Contact
+            </Link>
+          </div>
+          <button className="md:hidden" onClick={undefined} >
+            Menu
+          </button>
+          <div className="z-50">
+            <div className="flex flex-col gap-4">
+              <Link
+                className="flex items-center space-x-1.5 font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                href="#"
+              >
+                Home
+              </Link>
+              <Link
+                className="flex items-center space-x-1.5 font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                href="#"
+              >
+                About
+              </Link>
+              <Link
+                className="flex items-center space-x-1.5 font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                href="#"
+              >
+                Portfolio
+              </Link>
+              <Link
+                className="flex items-center space-x-1.5 font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                href="#"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main className="flex-1">
+        <section className="py-12 md:py-16 lg:py-20 xl:py-24">
+          <div className="container flex flex-col items-center justify-center gap-4 text-center md:gap-10">
+            <div className="space-y-3">
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Hi, I'm John Doe</h1>
+              <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 md:mx-auto lg:mx-auto">
+                I'm a passionate and creative web developer with a love for building amazing user experiences.
+              </p>
+            </div>
+            <div className="space-y-4 sm:space-y-0 sm:flex sm:gap-4 lg:gap-4">
+              <Link
+                className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200  bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                href="#"
+              >
+                Contact Me
+              </Link>
+              <Link
+                className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                href="#"
+              >
+                My Work
+              </Link>
+            </div>
+          </div>
+        </section>
+        <section className="py-12 md:py-16 lg:py-20 xl:py-24">
+          <div className="container grid items-center justify-center gap-4 px-4 text-center md:gap-10 md:px-6 lg:grid-cols-2 lg:text-left">
+            <div className="space-y-4 md:space-y-6">
+              <div className="space-y-3">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h2>
+                <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  I'm a web developer based in New York. I specialize in creating beautiful and functional websites
+                  using the latest technologies.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 items-center gap-4 text-left sm:gap-6">
+                <img
+                  alt="Profile Picture"
+                  className="rounded-full overflow-hidden object-cover object-center w-[180px]"
+                  height="180"
+                  src="/placeholder.svg"
+                  style={{
+                    aspectRatio: "180/180",
+                    objectFit: "cover",
+                  }}
+                  width="180"
+                />
+                <div className="space-y-4">
+                  <div className="space-y-1">
+                    <h3 className="font-semibold">John Doe</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Frontend Developer</p>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="leading-loose">
+                      Welcome to my personal website. I'm passionate about creating clean and elegant user interfaces.
+                      In my free time, I enjoy experimenting with new frameworks and libraries to expand my skill set.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="grid items-center justify-center gap-4 md:gap-8">
+              <div className="block w-full max-w-sm border border-dashed border-gray-200 border-gray-200 dark:border-gray-800 dark:border-gray-800" />
+              <div className="space-y-4">
+                <Link
+                  className="flex items-center space-x-1.5 font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                  href="#"
+                >
+                  <div className="w-4 h-4 stroke-current" />
+                  My Team
+                </Link>
+                <Link
+                  className="flex items-center space-x-1.5 font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                  href="#"
+                >
+                  <div className="w-4 h-4 stroke-current" />
+                  Contact Me
+                </Link>
+                <Link
+                  className="flex items-center space-x-1.5 font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                  href="#"
+                >
+                  <div className="w-4 h-4 stroke-current" />
+                  My Projects
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="py-12 md:py-16 lg:py-20 xl:py-24">
+          <div className="container grid items-center justify-center gap-4 px-4 text-center md:gap-10 md:px-6">
+            <div className="space-y-3">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Portfolio</h2>
+              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                Check out some of my recent projects.
+              </p>
+            </div>
+          </div>
+          <div className="container grid max-w-5xl items-center justify-center gap-4 px-4 text-center md:gap-8 md:px-6 lg:grid-cols-2 lg:text-left xl:max-w-6xl xl:gap-10">
+            <div className="mx-auto grid gap-2 sm:gap-4 items-center justify-center p-4 sm:p-8">
+              <img
+                alt="Project Image"
+                className="aspect-[4/3] overflow-hidden rounded-lg object-contain object-center"
+                height="400"
+                src="/placeholder.svg"
+                width="600"
+              />
+            </div>
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl">Project Title</h3>
+                <p className="text-gray-500 dark:text-gray-400">Description</p>
+              </div>
+              <div className="space-y-4">
+                <button >
+                  View Project
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="py-12 md:py-16 lg:py-20 xl:py-24">
+          <div className="container grid items-center justify-center gap-4 px-4 text-center md:gap-10 md:px-6">
+            <div className="space-y-3">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Skills</h2>
+              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                I'm experienced in the following technologies.
+              </p>
+            </div>
+          </div>
+          <div className="container grid max-w-5xl items-center justify-center gap-4 px-4 text-center md:gap-8 md:px-6 lg:grid-cols-2 lg:text-left xl:max-w-6xl xl:gap-10">
+            <div className="mx-auto grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
+              <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+                <div className="w-12 h-12" />
+              </div>
+              <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+                <div className="w-12 h-12" />
+              </div>
+              <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+                <div className="w-12 h-12" />
+              </div>
+              <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+                <div className="w-12 h-12" />
+              </div>
+              <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+                <div className="w-12 h-12" />
+              </div>
+              <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+                <div className="w-12 h-12" />
+              </div>
+            </div>
+            <div className="divide-y rounded-lg border">
+              <div className="grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
+                <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">HTML</div>
+                <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">CSS</div>
+                <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">JavaScript</div>
+              </div>
+              <div className="grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
+                <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">React</div>
+                <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">Next.js</div>
+                <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">TypeScript</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="py-12 md:py-16 lg:py-20 xl:py-24">
+          <div className="container grid items-center justify-center gap-4 px-4 text-center md:gap-10 md:px-6">
+            <div className="space-y-3">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Contact Me</h2>
+              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                Send me a message if you'd like to collaborate.
+              </p>
+            </div>
+            <form className="mx-auto max-w-[400px] grid gap-4">
+              <input className="mx-auto w-full md:grid-cols-2" placeholder="Name" type="text" />
+              <input className="mx-auto w-full md:grid-cols-2" placeholder="Email" type="email" />
+              <span className="mx-auto w-full md:grid-cols-2"  />
+              <button className="mx-auto w-full md:col-start-2" type="submit">
+                Submit
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer className="border-t">
+        <div className="container flex flex-col items-center justify-center gap-2 py-4 md:py-6">
+          <div className="text-center text-sm tracking-wider text-gray-500 dark:text-gray-400">
+            © 2023 Acme Inc. All rights reserved.
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+      </footer>
+    </div>
+  )
 }
+
