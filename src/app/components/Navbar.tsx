@@ -70,7 +70,7 @@ export default function Navbar() {
         className=" block md:hidden h-10 sm:border-none transition "
       >
         {click ? <FaTimes /> : <TfiMenuAlt />}
-      </button>dark:border-gray-800
+      </button>
     </nav>
   );
 }
