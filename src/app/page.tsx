@@ -77,7 +77,7 @@ export default function Component() {
                 TypeScript
               </span>
               <span className="inline rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
-                React.js
+                React
               </span>
               <span className="inline rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
                 Next.js
