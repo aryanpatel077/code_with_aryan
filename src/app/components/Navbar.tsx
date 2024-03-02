@@ -54,13 +54,13 @@ export default function Navbar() {
         <Link className="transition-colors hover:text-purple-800 " href="/">
           Home
         </Link>
-        <Link className="transition-colors hover:text-purple-800 " href="#">
+        <Link className="transition-colors hover:text-purple-800 " href="/">
           About
         </Link>
-        <Link className="transition-colors hover:text-purple-800 " href="#">
+        <Link className="transition-colors hover:text-purple-800 " href="/">
           Portfolio
         </Link>
-        <Link className="transition-colors hover:text-purple-800 " href="#">
+        <Link className="transition-colors hover:text-purple-800 " href="/contact">
           Contact
         </Link>
       </div>
@@ -70,7 +70,7 @@ export default function Navbar() {
         className=" block md:hidden h-10 sm:border-none transition "
       >
         {click ? <FaTimes /> : <TfiMenuAlt />}
-      </button>
+      </button>dark:border-gray-800
     </nav>
   );
 }

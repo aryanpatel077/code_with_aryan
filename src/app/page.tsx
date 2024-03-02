@@ -19,13 +19,13 @@ export default function Component() {
             <div className="space-y-4 sm:space-y-0 sm:flex sm:gap-4 lg:gap-4">
               <Link
                 className="inline-flex h-10 items-center justify-center rounded-md border px-8 text-sm font-medium shadow-sm transition-colors  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-purple-700 dark:hover:bg-purple-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                href="#"
+                href="/contact"
               >
                 Contact Me
               </Link>
               <Link
                 className="inline-flex h-10 items-center justify-center rounded-md border  px-8 text-sm font-medium shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-purple-700 dark:hover:bg-purple-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                href="#"
+                href="/"
               >
                 My Work
               </Link>
