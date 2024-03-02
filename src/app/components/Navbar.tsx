@@ -13,24 +13,36 @@ export default function Navbar() {
 
   const content = (
     <>
-      <div className="flex-col items-center justify-end mt-11 h-32 w-20 rounded text-gray-800 bg-white shadow-md md:hidden block absolute  right-1 transition ">
+      <div className="flex-col items-center justify-end mt-11 h-48 w-24 rounded text-gray-800 bg-white shadow-md md:hidden block absolute  right-1 transition ">
         <Link
           className="flex items-center  text-xs mx-2 py-2  transition-colors hover:text-gray-900 "
-          href="/"
-        >
-          Home
-        </Link>
-        <Link
-          className="flex items-center  text-xs  mx-2 py-2  transition-colors hover:text-gray-900 "
-          href="/"
+          href="/about"
         >
           About
         </Link>
         <Link
-          className="flex items-center  text-xs mx-2  py-2  transition-colors hover:text-gray-900 "
-          href="/"
+          className="flex items-center  text-xs  mx-2 py-2  transition-colors hover:text-gray-900 "
+          href="/blogs"
         >
-          Portfolio
+          Blogs
+        </Link>
+        <Link
+          className="flex items-center  text-xs mx-2  py-2  transition-colors hover:text-gray-900 "
+          href="/notes"
+        >
+          Notes
+        </Link>
+        <Link
+          className="flex items-center  text-xs mx-2  py-2  transition-colors hover:text-gray-900 "
+          href="/projects"
+        >
+          Projects
+        </Link>
+        <Link
+          className="flex items-center  text-xs mx-2  py-2  transition-colors hover:text-gray-900 "
+          href="/timeline"
+        >
+          Timeline
         </Link>
         <Link
           className="flex items-center  text-xs mx-2  py-2  transition-colors hover:text-gray-900 "
@@ -51,14 +63,20 @@ export default function Navbar() {
         <span className="text-lg">GxAryan</span>
       </Link>
       <div className="hidden items-center text-gray-800 font-lg md:flex space-x-6 lg:space-x-10 justify-end">
-        <Link className="transition-colors hover:text-gray-900" href="/">
-          Home
-        </Link>
-        <Link className="transition-colors hover:text-gray-900 " href="/">
+        <Link className="transition-colors hover:text-gray-900" href="/about">
           About
         </Link>
-        <Link className="transition-colors hover:text-gray-900" href="/">
-          Portfolio
+        <Link className="transition-colors hover:text-gray-900 " href="/blogs">
+          Blogs
+        </Link>
+        <Link className="transition-colors hover:text-gray-900" href="/notes">
+          Notes
+        </Link>
+        <Link className="transition-colors hover:text-gray-900" href="/projects">
+          Projects
+        </Link>
+        <Link className="transition-colors hover:text-gray-900" href="/timeline">
+          Timeline
         </Link>
         <Link className="transition-colors hover:text-gray-900" href="/contact">
           Contact
