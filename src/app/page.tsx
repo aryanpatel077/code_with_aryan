@@ -70,7 +70,7 @@ export default function Component() {
           <div className="space-y-2">
             <h3 className="inline text-2xl font-semibold tracking-tighter sm:text-3xl">Frontend</h3>
             <div className="gap-2.5 md:gap-3.5">
-              <span className="inline rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
+              <span className="inline rounded-lg border border-gray-200 bg-gray-50 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
                 JavaScript
               </span>
               <span className="inline rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
@@ -87,7 +87,7 @@ export default function Component() {
           <div className="space-y-2">
             <h3 className="inline text-2xl font-semibold tracking-tighter sm:text-3xl">Backend</h3>
             <div className="gap-2.5 md:gap-3.5">
-              <span className="inline rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
+              <span className="inline rounded-lg border border-gray-200 bg-gray-50 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
                 Node.js
               </span>
               <span className="inline rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
@@ -101,7 +101,7 @@ export default function Component() {
           <div className="space-y-2">
             <h3 className="inline text-2xl font-semibold tracking-tighter sm:text-3xl">Databases</h3>
             <div className="gap-2.5 md:gap-3.5">
-              <span className="inline rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
+              <span className="inline rounded-lg border border-gray-200 bg-gray-50 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
                 PostgreSQL
               </span>
               <span className="inline rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
@@ -115,7 +115,7 @@ export default function Component() {
           <div className="space-y-2">
             <h3 className="inline text-2xl font-semibold tracking-tighter sm:text-3xl">Tools</h3>
             <div className="gap-2.5 md:gap-3.5">
-              <span className="inline rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
+              <span className="inline rounded-lg border border-gray-200 bg-gray-50 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
                 Git
               </span>
               <span className="inline rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
