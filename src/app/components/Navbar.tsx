@@ -50,17 +50,17 @@ export default function Navbar() {
         <FaCode />
         <span className="text-lg">GxAryan</span>
       </Link>
-      <div className="hidden items-center font-lg md:flex space-x-6 lg:space-x-10 justify-end">
-        <Link className="transition-colors hover:text-purple-800 " href="/">
+      <div className="hidden items-center text-gray-800 font-lg md:flex space-x-6 lg:space-x-10 justify-end">
+        <Link className="transition-colors hover:text-gray-900" href="/">
           Home
         </Link>
-        <Link className="transition-colors hover:text-purple-800 " href="/">
+        <Link className="transition-colors hover:text-gray-900 " href="/">
           About
         </Link>
-        <Link className="transition-colors hover:text-purple-800 " href="/">
+        <Link className="transition-colors hover:text-gray-900" href="/">
           Portfolio
         </Link>
-        <Link className="transition-colors hover:text-purple-800 " href="/contact">
+        <Link className="transition-colors hover:text-gray-900" href="/contact">
           Contact
         </Link>
       </div>
