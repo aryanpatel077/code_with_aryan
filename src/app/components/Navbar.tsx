@@ -44,7 +44,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`flex justify-between px-2 md:px-4 border-b bg-gray-50 `}
+      className={`flex justify-between py-2 px-6 md:px-10 border-b bg-gray-50 `}
     >
       <Link className="h-10 flex items-center space-x-1 font-sans" href="/">
         <FaCode />
