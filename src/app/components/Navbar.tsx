@@ -22,19 +22,19 @@ export default function Navbar() {
         </Link>
         <Link
           className="flex items-center  text-xs  mx-2 py-2  transition-colors hover:text-gray-900 "
-          href="#"
+          href="/"
         >
           About
         </Link>
         <Link
           className="flex items-center  text-xs mx-2  py-2  transition-colors hover:text-gray-900 "
-          href="#"
+          href="/"
         >
           Portfolio
         </Link>
         <Link
           className="flex items-center  text-xs mx-2  py-2  transition-colors hover:text-gray-900 "
-          href="#"
+          href="/contact"
         >
           Contact
         </Link>

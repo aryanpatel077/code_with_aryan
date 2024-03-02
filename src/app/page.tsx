@@ -70,7 +70,7 @@ export default function Component() {
           </div>
           <div className="grid w-full grid-cols-2 items-start justify-center gap-4 md:grid-cols-4 md:gap-8">
             <div className="flex flex-col items-center justify-center space-y-1">
-              <div className="rounded-full overflow-hidden border border-gray-200 border-gray-200 dark:border-gray-800 dark:border-gray-800">
+              <div className="rounded-full overflow-hidden border border-gray-200 dark:border-gray-800">
                 <img
                   alt="Icon"
                   className="aspect-[1/1] object-cover object-center"
@@ -82,7 +82,7 @@ export default function Component() {
               <span className="text-sm font-medium">HTML5</span>
             </div>
             <div className="flex flex-col items-center justify-center space-y-1">
-              <div className="rounded-full overflow-hidden border border-gray-200 border-gray-200 dark:border-gray-800 dark:border-gray-800">
+              <div className="rounded-full overflow-hidden border border-gray-200  dark:border-gray-800">
                 <img
                   alt="Icon"
                   className="aspect-[1/1] object-cover object-center"
@@ -94,7 +94,7 @@ export default function Component() {
               <span className="text-sm font-medium">CSS3</span>
             </div>
             <div className="flex flex-col items-center justify-center space-y-1">
-              <div className="rounded-full overflow-hidden border border-gray-200 border-gray-200 dark:border-gray-800 dark:border-gray-800">
+              <div className="rounded-full overflow-hidden border border-gray-200  dark:border-gray-800">
                 <img
                   alt="Icon"
                   className="aspect-[1/1] object-cover object-center"
@@ -106,7 +106,7 @@ export default function Component() {
               <span className="text-sm font-medium">JavaScript</span>
             </div>
             <div className="flex flex-col items-center justify-center space-y-1">
-              <div className="rounded-full overflow-hidden border border-gray-200 border-gray-200 dark:border-gray-800 dark:border-gray-800">
+              <div className="rounded-full overflow-hidden border border-gray-200 dark:border-gray-800">
                 <img
                   alt="Icon"
                   className="aspect-[1/1] object-cover object-center"
@@ -118,7 +118,7 @@ export default function Component() {
               <span className="text-sm font-medium">TypeScript</span>
             </div>
             <div className="flex flex-col items-center justify-center space-y-1">
-              <div className="rounded-full overflow-hidden border border-gray-200 border-gray-200 dark:border-gray-800 dark:border-gray-800">
+              <div className="rounded-full overflow-hidden border border-gray-200 dark:border-gray-800">
                 <img
                   alt="Icon"
                   className="aspect-[1/1] object-cover object-center"
@@ -130,7 +130,7 @@ export default function Component() {
               <span className="text-sm font-medium">React</span>
             </div>
             <div className="flex flex-col items-center justify-center space-y-1">
-              <div className="rounded-full overflow-hidden border border-gray-200 border-gray-200 dark:border-gray-800 dark:border-gray-800">
+              <div className="rounded-full overflow-hidden border border-gray-200  dark:border-gray-800">
                 <img
                   alt="Icon"
                   className="aspect-[1/1] object-cover object-center"
@@ -142,7 +142,7 @@ export default function Component() {
               <span className="text-sm font-medium">Next.js</span>
             </div>
             <div className="flex flex-col items-center justify-center space-y-1">
-              <div className="rounded-full overflow-hidden border border-gray-200 border-gray-200 dark:border-gray-800 dark:border-gray-800">
+              <div className="rounded-full overflow-hidden border border-gray-200  dark:border-gray-800">
                 <img
                   alt="Icon"
                   className="aspect-[1/1] object-cover object-center"
@@ -180,9 +180,9 @@ export default function Component() {
                   src="/placeholder.svg"
                   width="500"
                 />
-                <div className="flex items-center justify-center p-4 border border-dashed border-gray-200 border-gray-200 dark:border-gray-800 dark:border-gray-800">
+                <div className="flex items-center justify-center p-4 border border-dashed border-gray-200  dark:border-gray-800">
                   <Link
-                    className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-4 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                    className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200  bg-white px-4 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800  dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
                     href="#"
                   >
                     View Project
@@ -203,9 +203,9 @@ export default function Component() {
                   src="/placeholder.svg"
                   width="500"
                 />
-                <div className="flex items-center justify-center p-4 border border-dashed border-gray-200 border-gray-200 dark:border-gray-800 dark:border-gray-800">
+                <div className="flex items-center justify-center p-4 border border-dashed border-gray-200  dark:border-gray-800 ">
                   <Link
-                    className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-4 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                    className="inline-flex h-9 items-center justify-center rounded-md border  border-gray-200 bg-white px-4 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800  dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
                     href="#"
                   >
                     View Project
