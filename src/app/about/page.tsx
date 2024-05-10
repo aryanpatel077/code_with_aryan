@@ -23,7 +23,7 @@ export default function page() {
               <div data-aos="zoom-in" className="relative">
                 <img
                   className="object-cover object-center mx-auto rounded-lg shadow-2xl scale-up-center"
-                  alt="hero"
+                  alt="profile"
                   src="abhi.jpeg"
                 />
               </div>

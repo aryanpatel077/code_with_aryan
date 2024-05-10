@@ -13,24 +13,18 @@ export default function Navbar() {
 
   const content = (
     <>
-      <div className="flex-col items-center justify-end mt-11 h-48 w-24 rounded text-gray-800 bg-white shadow-md md:hidden block absolute  right-1 transition ">
+      <div className="flex-col items-center justify-end mt-12 h-40 w-24 rounded text-gray-800 bg-white shadow-md md:hidden block absolute  right-1 transition ">
+        <Link
+          className="flex items-center  text-xs  mx-2 py-2  transition-colors hover:text-gray-900 "
+          href="/"
+        >
+          Home
+        </Link>
         <Link
           className="flex items-center  text-xs mx-2 py-2  transition-colors hover:text-gray-900 "
           href="/about"
         >
           About
-        </Link>
-        <Link
-          className="flex items-center  text-xs  mx-2 py-2  transition-colors hover:text-gray-900 "
-          href="/blogs"
-        >
-          Blogs
-        </Link>
-        <Link
-          className="flex items-center  text-xs mx-2  py-2  transition-colors hover:text-gray-900 "
-          href="/notes"
-        >
-          Notes
         </Link>
         <Link
           className="flex items-center  text-xs mx-2  py-2  transition-colors hover:text-gray-900 "
@@ -72,10 +66,16 @@ export default function Navbar() {
         <Link className="transition-colors hover:text-gray-900" href="/notes">
           Notes
         </Link>
-        <Link className="transition-colors hover:text-gray-900" href="/projects">
+        <Link
+          className="transition-colors hover:text-gray-900"
+          href="/projects"
+        >
           Projects
         </Link>
-        <Link className="transition-colors hover:text-gray-900" href="/timeline">
+        <Link
+          className="transition-colors hover:text-gray-900"
+          href="/timeline"
+        >
           Timeline
         </Link>
         <Link className="transition-colors hover:text-gray-900" href="/contact">
@@ -111,14 +111,14 @@ export default function Navbar() {
 //   return (
 //     <div className='shadow-md w-full fixed top-0 left-0'>
 //       <div className='md:flex items-center justify-between bg-white py-2 md:px-10 px-2'>
-//       <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
+//       <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins]
 //       text-gray-800'>
 //         <span className='text-indigo-600 mr-1 pt-2'>
 //         <FaCode />
 //         </span>
 //         gxaryan
 //       </div>
-      
+
 //       <div onClick={()=>setOpen(!open)} className='text-2xl absolute right-2 top-4 cursor-pointer md:hidden'>
 //       <TfiMenuAlt name={open ? 'close':'menu'} />
 //       </div>
