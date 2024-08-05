@@ -84,7 +84,7 @@ export default function page() {
   ];
   return (
     <main>
-      <section className="my-10 py-5">
+      <section className="my-2 py-5">
         <div className="text-center text-black">
           <h1 className="font-heading font-bold text-2xl md:text-3xl lg:text-4xl">
             Timeline

@@ -1,143 +1,112 @@
 "use client";
-import Link from "next/link";
-import { TfiMenuAlt } from "react-icons/tfi";
-import { FaCode } from "react-icons/fa6";
-import { FaTimes } from "react-icons/fa";
-import { useState } from "react";
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Navbar() {
-  const [click, setclick] = useState(false);
-  const handleClick = () => {
-    setclick(!click);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
   };
 
-  const content = (
-    <>
-      <div className="flex-col items-center justify-end mt-12 h-40 w-24 rounded text-gray-800 bg-white shadow-md md:hidden block absolute  right-1 transition ">
-        <Link
-          className="flex items-center  text-xs  mx-2 py-2  transition-colors hover:text-gray-900 "
-          href="/"
-        >
-          Home
-        </Link>
-        <Link
-          className="flex items-center  text-xs mx-2 py-2  transition-colors hover:text-gray-900 "
-          href="/about"
-        >
-          About
-        </Link>
-        <Link
-          className="flex items-center  text-xs mx-2  py-2  transition-colors hover:text-gray-900 "
-          href="/projects"
-        >
-          Projects
-        </Link>
-        <Link
-          className="flex items-center  text-xs mx-2  py-2  transition-colors hover:text-gray-900 "
-          href="/timeline"
-        >
-          Timeline
-        </Link>
-        <Link
-          className="flex items-center  text-xs mx-2  py-2  transition-colors hover:text-gray-900 "
-          href="/contact"
-        >
-          Contact
-        </Link>
-      </div>
-    </>
-  );
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  const handleOutsideClick = (e:any) => {
+    if (isOpen && !e.target.closest('#menu-panel')) {
+      closeMenu();
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('click', handleOutsideClick);
+    } else {
+      document.removeEventListener('click', handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, [isOpen]);
 
   return (
-    <nav
-      className={`flex justify-between py-2 px-6 md:px-10 border-b bg-gray-50 `}
-    >
-      <Link className="h-10 flex items-center space-x-1 font-sans" href="/">
-        <FaCode />
-        <span className="text-lg">GxAryan</span>
-      </Link>
-      <div className="hidden items-center text-gray-800 font-lg md:flex space-x-6 lg:space-x-10 justify-end">
-        <Link className="transition-colors hover:text-gray-900" href="/about">
-          About
-        </Link>
-        <Link className="transition-colors hover:text-gray-900 " href="/blogs">
-          Blogs
-        </Link>
-        <Link className="transition-colors hover:text-gray-900" href="/notes">
-          Notes
-        </Link>
-        <Link
-          className="transition-colors hover:text-gray-900"
-          href="/projects"
-        >
-          Projects
-        </Link>
-        <Link
-          className="transition-colors hover:text-gray-900"
-          href="/timeline"
-        >
-          Timeline
-        </Link>
-        <Link className="transition-colors hover:text-gray-900" href="/contact">
-          Contact
-        </Link>
+    <nav className="bg-white border-b border-gray-200 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Link href="/" passHref>
+              <div className="text-2xl font-bold text-gray-900 cursor-pointer">GxAryan</div>
+            </Link>
+          </div>
+          <div className="hidden md:flex items-center space-x-8">
+            <Link href="/about" passHref>
+              <div className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium cursor-pointer">About</div>
+            </Link>
+            <Link href="/timeline" passHref>
+              <div className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium cursor-pointer">Timeline</div>
+            </Link>
+            <Link href="/notes" passHref>
+              <div className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium cursor-pointer">Notes</div>
+            </Link>
+            <Link href="/contact" passHref>
+              <div className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium cursor-pointer">Contact</div>
+            </Link>
+          </div>
+          <div className="flex items-center md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
+            >
+              <span className="sr-only">Open main menu</span>
+              {!isOpen ? (
+                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              ) : (
+                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="md:hidden">{click && content}</div>
-      <button
-        onClick={handleClick}
-        className=" block md:hidden h-10 sm:border-none transition "
+
+      <div
+        id="menu-panel"
+        className={`fixed inset-y-0 right-0 w-1/2 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        } md:hidden`}
       >
-        {click ? <FaTimes /> : <TfiMenuAlt />}
-      </button>
+        <div className="flex flex-col items-center justify-center h-full space-y-8 relative">
+          <button
+            onClick={closeMenu}
+            className="absolute top-4 right-4 text-gray-900 hover:text-blue-600 focus:outline-none"
+          >
+            <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <Link href="/" passHref>
+            <div onClick={closeMenu} className="text-gray-900 hover:text-blue-600 text-lg font-medium cursor-pointer">Home</div>
+          </Link>
+          <Link href="/about" passHref>
+            <div onClick={closeMenu} className="text-gray-900 hover:text-blue-600 text-lg font-medium cursor-pointer">About</div>
+          </Link>
+          <Link href="/timeline" passHref>
+            <div onClick={closeMenu} className="text-gray-900 hover:text-blue-600 text-lg font-medium cursor-pointer">Timeline</div>
+          </Link>
+          <Link href="/notes" passHref>
+            <div onClick={closeMenu} className="text-gray-900 hover:text-blue-600 text-lg font-medium cursor-pointer">Notes</div>
+          </Link>
+          <Link href="/contact" passHref>
+            <div onClick={closeMenu} className="text-gray-900 hover:text-blue-600 text-lg font-medium cursor-pointer">Contact</div>
+          </Link>
+        </div>
+      </div>
     </nav>
   );
 }
-
-// font-[Poppins]
-// "use client";
-// import { TfiMenuAlt } from "react-icons/tfi";
-// import React, { useState } from 'react'
-// import { FaCode } from "react-icons/fa6";
-
-// const Navbar = () => {
-//     let Links =[
-//       {name:"HOME",link:"/"},
-//       {name:"SERVICE",link:"/"},
-//       {name:"ABOUT",link:"/"},
-//       {name:"BLOG'S",link:"/"},
-//       {name:"CONTACT",link:"/"},
-//     ];
-//     let [open,setOpen]=useState(false);
-//   return (
-//     <div className='shadow-md w-full fixed top-0 left-0'>
-//       <div className='md:flex items-center justify-between bg-white py-2 md:px-10 px-2'>
-//       <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins]
-//       text-gray-800'>
-//         <span className='text-indigo-600 mr-1 pt-2'>
-//         <FaCode />
-//         </span>
-//         gxaryan
-//       </div>
-
-//       <div onClick={()=>setOpen(!open)} className='text-2xl absolute right-2 top-4 cursor-pointer md:hidden'>
-//       <TfiMenuAlt name={open ? 'close':'menu'} />
-//       </div>
-
-//       <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-14 ':'top-[-490px]'}`}>
-//         {
-//           Links.map((link)=>(
-//             <li key={link.name} className='md:ml-8 text-sm md:my-0 my-4'>
-//               <a href={link.link} className='text-gray-800 hover:text-gray-400 duration-500'>{link.name}</a>
-//             </li>
-//           ))
-//         }
-//         {/* <Button>
-//           Get Started
-//         </Button> */}
-//       </ul>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Navbar
