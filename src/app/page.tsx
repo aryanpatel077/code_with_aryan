@@ -104,7 +104,7 @@ export default function Component() {
             >
               <img
                 alt="Profile Picture"
-                className="rounded-full grayscale"
+                className="rounded-full"
                 height="200"
                 src="/abhi.jpeg"
                 style={{
