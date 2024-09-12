@@ -533,7 +533,6 @@ export default function page() {
           Thank you very much 🙏
         </p>
       </section>
-      <Footer />
     </main>
   );
 }

@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { error } from "console";
+import Link from "next/link";
 export default function Contact() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 border-t">
@@ -20,34 +22,45 @@ export default function Contact() {
           </div>
           <div className="mx-auto w-full max-w-[500px] space-y-4">
             <form className="grid gap-4">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <Input
-                  className="w-full"
-                  placeholder="First Name"
-                  type="text"
-                />
-                <Input className="w-full" placeholder="Last Name" type="text" />
-              </div>
-              <Input className="w-full" placeholder="Email" type="email" />
-              <Input className="w-full" placeholder="Subject" type="text" />
+                <Input className="w-full" required placeholder="Name" type="text" />
+              <Input className="w-full" required placeholder="Email" type="email" />
+              <Input className="w-full" required placeholder="Subject" type="text" />
               <Textarea
                 className="min-h-[100px] w-full"
                 placeholder="Your Message"
+                required
               />
-              <Button type="submit">Submit</Button>
+              <Button disabled onClick={undefined} type="submit">Submit</Button>
+              <div className="text-xs p-2"><p>* Currently this service is unavailable Optional service below!</p></div>
             </form>
           </div>
         </div>
-        <div className="flex-col mt-2 gap-2">
-          <div className="flex">
-            <h1 className="">Contact: </h1>
-            <p className=""> +(91) 7987419262</p>
-          </div>
-          <div className="flex">
-            <h1 className="">Email:-</h1>
-            <p className=""> aryanpatel7987@gamil.com</p>
-          </div>
-        </div>
+        <div className="flex justify-center items-center min-h-0.5 pt-10">
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
+
+        {/* Internal Page Navigation Using Link */}
+        <p className="text-lg">
+          Visit our <Link className="text-blue-500 hover:underline" href={"/about"}>About Page</Link>
+        </p>
+
+        {/* Phone Link */}
+        <p className="text-lg mt-4">
+          Call us:{" "}
+          <Link href="tel:+91 7987419262" className="text-blue-500 hover:underline">
+            +(91) 7987419262
+          </Link>
+        </p>
+
+        {/* Email Link */}
+        <p className="text-lg mt-4">
+          Email us:{" "}
+          <Link href="mailto:aryanpatel7987@gmail.com" className="text-blue-500 hover:underline">
+            aryanpatel7987@gmail.com
+          </Link>
+        </p>
+      </div>
+    </div>
       </div>
     </section>
   );

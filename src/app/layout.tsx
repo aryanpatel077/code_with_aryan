@@ -19,9 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
-        <div className="h-screen">{children}</div>
-        </body>
+        <div className="bg-gray-100 min-h-screen">
+          {/* The main content container with maximum width at screen 'md' */}
+          <div className="max-w-screen-lg mx-auto bg-white shadow-md p-6 min-h-screen">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        </div>
+      </body>
     </html>
   );
 }

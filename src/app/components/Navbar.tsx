@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Footer from './Footer';
+import SocialLinks from './SocialLinks';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,10 +83,10 @@ export default function Navbar() {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden`}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-8 relative">
+        <div className="flex flex-col items-center pt-12  min-h-screen space-y-12 relative">
           <button
             onClick={closeMenu}
-            className="absolute top-4 right-4 text-gray-900 hover:text-blue-600 focus:outline-none"
+            className="absolute top-10 right-12 text-gray-900 hover:text-blue-600 focus:outline-none"
           >
             <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -105,7 +107,9 @@ export default function Navbar() {
           <Link href="/contact" passHref>
             <div onClick={closeMenu} className="text-gray-900 hover:text-blue-600 text-lg font-medium cursor-pointer">Contact</div>
           </Link>
+         <div className="pt-[23vh]"> <SocialLinks/> </div>
         </div>
+       
       </div>
     </nav>
   );
